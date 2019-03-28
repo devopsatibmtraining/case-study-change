@@ -24,7 +24,7 @@ public class Test_Login {
     public void test3() {
 
         guru_register check3 = new guru_register();
-        assertThat(check3.first_name, not(isEmptyString()));
+        assertThat(check3().first_name, not(isEmptyString()));
 
     }
 
