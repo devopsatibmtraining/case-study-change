@@ -37,7 +37,7 @@ public class guru_login extends HttpServlet {
 		}
 		else
 		{
-			String login_stat = "You have entered the wrong username or password";
+			String login_stat = "You : have entered the wrong username or password";
 			RequestDispatcher req = request.getRequestDispatcher("index.jsp");
 			request.setAttribute("login_stat",login_stat);
 			req.include(request, response);
