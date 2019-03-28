@@ -59,6 +59,19 @@
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>0.7.6.201602180812</version>
+          <configuration>
+          <includes>
+            <include>Test_Login.java</include>
+          </includes>
+        </configuration>
+     		<reportSets>
+					<reportSet>
+						<reports>
+							<!-- select non-aggregate reports -->
+							<report>report</report>
+						</reports>
+					</reportSet>
+      </reportSets>
      </plugin>
     </plugins>
     
