@@ -24,7 +24,15 @@ public class Test_Login {
     public void test3() {
 
         guru_login check3 = new guru_login();
-        assertEquals("SPRINT", check3.username("SPRINT"));
+        assertEquals("Login is valid", true, check3.isUserValid("true","mistake"));
+
+    }
+    
+    @Test
+    public void test4() {
+
+        guru_login check3 = new guru_login();
+        assertEquals("Login is valid", true, check3.isPasswordValid("true","mistake"));
 
     }
 
