@@ -24,7 +24,7 @@ public class Test_Login {
     public void test3() {
 
         guru_register check3 = new guru_register();
-        
+        //To Test guru_register.java file
     }
 
 }
