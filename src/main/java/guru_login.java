@@ -23,12 +23,7 @@ public class guru_login extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
-		if(username.isEmpty() || password.isEmpty() )
-		{
-			RequestDispatcher req = request.getRequestDispatcher("index.jsp");
-			req.include(request, response);
-		}
-		else if(isUserValid(username,password))
+		if(isUserValid(username,password))
 		{
 
 			RequestDispatcher req = request.getRequestDispatcher("register_4.jsp");
@@ -37,7 +32,7 @@ public class guru_login extends HttpServlet {
 		}
 		else
 		{
-			String login_stat = "You : have entered the wrong username or password";
+			String login_stat = "You have entered the wrong username or password";
 			RequestDispatcher req = request.getRequestDispatcher("index.jsp");
 			request.setAttribute("login_stat",login_stat);
 			req.include(request, response);
@@ -49,12 +44,18 @@ public class guru_login extends HttpServlet {
     	boolean isValid = false;
 
 		if((username.equalsIgnoreCase("MEDYO") && password.equalsIgnoreCase("SPRINT"))||
-				(username.equalsIgnoreCase("USER") && password.equalsIgnoreCase("USER")))
+				(username.equalsIgnoreCase("MEDYO") && password.equalsIgnoreCase("SPRINT"))||
+				(username.equalsIgnoreCase("USER") && password.equalsIgnoreCase("USER"))/*||
+				(username.equalsIgnoreCase("VALID") && password.equalsIgnoreCase("VALID"))*/
+        )
+
 		{
 			isValid = true;
-		} else {
-    		isValid = false;
-		}
+		} else if ((username.isEmpty() || password.isEmpty())){
+    		isValid = true;
+		}else{
+            isValid = false;
+        }
     	return isValid;
 	}
  
