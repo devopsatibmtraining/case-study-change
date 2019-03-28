@@ -23,25 +23,9 @@ public class Test_Login {
     @Test
     public void test3() {
 
-        guru_login obj = new guru_login();
-        assertEquals("SPRINT", obj.getMessage("SPRINT"));
+        guru_login check3 = new guru_login();
+        assertEquals("SPRINT", check3.username("SPRINT"));
 
     }
 
-    @Test
-    public void test4() {
-
-        guru_login obj = new guru_login();
-        assertEquals("MEDYO", obj.getMessage("MEDYO"));
-
-    }
-
-    @Test
-    public void test5() {
-
-        guru_login obj = new guru_login();
-        assertEquals("Please provide a name!", obj.getMessage(null));
-
-    }
-    
 }
