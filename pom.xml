@@ -63,8 +63,7 @@
           <includes>
             <include>Test_Login.java</include>
           </includes>
-        </configuration>
-     		<reportSets>
+		<reportSets>
 					<reportSet>
 						<reports>
 							<!-- select non-aggregate reports -->
@@ -72,6 +71,7 @@
 						</reports>
 					</reportSet>
       </reportSets>
+     </configuration>
      </plugin>
     </plugins>
     
