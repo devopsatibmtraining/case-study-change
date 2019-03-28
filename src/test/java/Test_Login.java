@@ -23,8 +23,8 @@ public class Test_Login {
     @Test
     public void test3() {
 
-        guru_login check3 = new guru_login();
-        assertEquals("Login is valid", true, check3.isUserValid("true","mistake"));
+        guru_register check3 = new guru_register();
+        assertThat(check3.first_name, not(isEmptyString()));
 
     }
 
